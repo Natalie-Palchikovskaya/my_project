@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import (QWidget, QPushButton, QLineEdit,
-    QInputDialog, QApplication, QLabel, QHBoxLayout)
-from PyQt5.QtGui import QColor
+    QInputDialog, QApplication, QLabel)
+from PyQt5.QtGui import QColor, QPalette, QIcon
 from PyQt5.QtGui import QPixmap
 from neuroflowers import predict
 
@@ -15,22 +15,30 @@ class main_gui(QWidget):
 
     def initUI(self):
         self.btn = QPushButton('Download picture', self)
+        self.btn.setStyleSheet("background-color: white;")
         self.btn.move(20, 20)
         self.btn.clicked.connect(self.showDialog)
 
         self.le = QLineEdit(self)
+        self.le.setStyleSheet("background-color: white;")
         self.le.move(130, 22)
 
         self.btn1 = QPushButton('What is the flower?', self)
+        self.btn1.setStyleSheet("background-color: white;")
         self.btn1.move(20, 48)
         self.btn1.clicked.connect(self.flower)
         self.le1 = QLineEdit(self)
+        self.le1.setStyleSheet("background-color: white;")
         self.le1.move(130, 50)
 
         self.lab = QLabel(self)  # для вывода нередактируемого текста
         self.lab.setText("Accuracy, %:")
         self.lab.move(130, 70)
 
+        # palette =QPalette()
+        # palette.setColor(QPalette.Window, QColor(255, 192, 203))
+        self.setWindowIcon(QIcon('D:\ПРОГРАММИРОВАНИЕ2020\my project\icon2.jpg'))
+        self.setStyleSheet("background-color: pink;")
         self.setGeometry(1000, 500, 750, 400)
         self.setWindowTitle('Guess the flower')
         self.show()
