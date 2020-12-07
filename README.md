@@ -29,3 +29,8 @@ gui2.py. Тогда появится следующее окно:
 При нажатии на кнопку "Download picture" можно загрузить фото растения. Для получения ответа следует нажать кнопку "What 
 is the flower?"
 
+![alt text](https://github.com/Natalie-Palchikovskaya/my_project/blob/main/res_gui.png "Logo Title Text 1")
+
+Accuracy показывает точность, с которой определен данный цветок.
+
+## Дальнейшие планы развития проекта ##
