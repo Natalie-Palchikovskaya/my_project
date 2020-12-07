@@ -27,7 +27,7 @@ gui2.py. Тогда появится следующее окно:
 
 ![alt text](https://github.com/Natalie-Palchikovskaya/my_project/blob/main/GUI.png "Logo Title Text 1")
 
-При нажатии на кнопку "Download picture" можно загрузить фото растения. Для получения ответа следует нажать кнопку "What 
+При нажатии на кнопку "Download picture" можно загрузить фото растения. Для получения ответа следует нажать клавишу "What 
 is the flower?"
 
 ![alt text](https://github.com/Natalie-Palchikovskaya/my_project/blob/main/res_gui.png "Logo Title Text 1")
