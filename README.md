@@ -49,6 +49,10 @@ Accuracy показывает точность, с которой определ
 
 ![alt text](https://github.com/Natalie-Palchikovskaya/my_project/blob/main/example2.png)
 
+Предусмотрена кнопка "Help" с инструкцией по использованию программы.
+
+![alt text](https://github.com/Natalie-Palchikovskaya/my_project/blob/main/example3.png)
+
 Для использования новой версии программы необходимо скачать папку "project_new_version" и запросить обученную нейронную сеть у разработчика.
 
 
