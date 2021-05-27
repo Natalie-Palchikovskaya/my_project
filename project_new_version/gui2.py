@@ -1,8 +1,7 @@
 import sys
 import os
-import PyQt5
 from PyQt5.QtWidgets import (QWidget, QPushButton, QLineEdit,
-    QInputDialog, QApplication, QLabel, QPlainTextEdit, QFileDialog)
+    QInputDialog, QApplication, QLabel, QPlainTextEdit, QFileDialog, QMessageBox)
 from PyQt5.QtGui import QColor, QPalette, QIcon
 from PyQt5.QtGui import QPixmap
 from neuroflowers import predict
@@ -34,9 +33,15 @@ class main_gui(QWidget):
         self.le1.setStyleSheet("background-color: white;")
         self.le1.move(130, 50)
 
+
         self.lab = QLabel(self)  # для вывода нередактируемого текста
         self.lab.setText("Accuracy, %:")
         self.lab.move(130, 70)
+
+        self.btn2 = QPushButton('Help', self)
+        self.btn2.setStyleSheet("background-color: white;")
+        self.btn2.move(650, 5)
+        self.btn2.clicked.connect(self.showHelp)
 
         # palette =QPalette()
         # palette.setColor(QPalette.Window, QColor(255, 192, 203))
@@ -45,6 +50,8 @@ class main_gui(QWidget):
         self.setGeometry(1000, 500, 750, 400)
         self.setWindowTitle('Guess the flower')
         self.show()
+
+
 
     def flower(self):
         self.le1.setText("Processing...")
@@ -170,6 +177,14 @@ class main_gui(QWidget):
 
         if not filename:
             return
+
+    def showHelp(self):
+        self.msgBox = QMessageBox(self)
+        self.msgBox.setWindowTitle("Help")
+        self.msgBox.setText("1.Нажмите клавишу 'Download picture'\n 2.Выберите изображение для загрузки и нажмите "
+                            "'Открыть'\n "
+                            "3.Нажмите клавишу 'What is the flower?' и получите ответ")
+        self.msgBox.exec()
 
 
 
